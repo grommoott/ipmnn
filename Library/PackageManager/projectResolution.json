@@ -5,9 +5,17 @@
   },
   "inputs": [
     "/home/grommoott/Обучение/Unity/IPMNN/Packages/manifest.json",
-    "/home/grommoott/Обучение/Unity/IPMNN/Packages/packages-lock.json"
+    "/home/grommoott/Обучение/Unity/IPMNN/Packages/packages-lock.json",
+    "/home/grommoott/aur/NuGetForUnity/src/NuGetForUnity/package.json"
   ],
   "outputs": {
+    "com.github-glitchenzo.nugetforunity@file:/home/grommoott/aur/NuGetForUnity/src/NuGetForUnity": {
+      "name": "com.github-glitchenzo.nugetforunity",
+      "resolvedPath": "/home/grommoott/aur/NuGetForUnity/src/NuGetForUnity",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "4.1.1",
+      "source": "local"
+    },
     "com.unity.collab-proxy@2.5.2": {
       "name": "com.unity.collab-proxy",
       "resolvedPath": "/home/grommoott/Обучение/Unity/IPMNN/Library/PackageCache/com.unity.collab-proxy",
