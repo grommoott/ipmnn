@@ -73,10 +73,12 @@
     <Compile Include="Assets/Scripts/Items/Storages/ShopInventory.cs" />
     <Compile Include="Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventory.cs" />
     <Compile Include="Assets/Scripts/Items/Storages/Inventory.cs" />
+    <Compile Include="Assets/Scripts/UI/Page.cs" />
     <Compile Include="Assets/Scripts/Global/GlobalEvents/GlobalEventLists/Input.cs" />
     <Compile Include="Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventorySlot.cs" />
     <Compile Include="Assets/Scripts/Items/Shell/ItemShellManager.cs" />
     <Compile Include="Assets/Scripts/Global/GlobalEvents/GlobalEventsManager.cs" />
+    <Compile Include="Assets/Scripts/UI/UIManager.cs" />
     <Compile Include="Assets/Scripts/Items/Shell/ItemShell.cs" />
     <Compile Include="Assets/Scripts/Global/GlobalEvents/IGlobalEventListener.cs" />
     <Compile Include="Assets/Scripts/Global/InputManager.cs" />

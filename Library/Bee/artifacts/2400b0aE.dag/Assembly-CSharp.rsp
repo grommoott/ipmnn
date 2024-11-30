@@ -411,6 +411,8 @@
 "Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventory.cs"
 "Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventorySlot.cs"
 "Assets/Scripts/Items/Storages/ShopInventory.cs"
+"Assets/Scripts/UI/Page.cs"
+"Assets/Scripts/UI/UIManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+
