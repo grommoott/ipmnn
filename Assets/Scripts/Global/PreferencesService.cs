@@ -19,13 +19,15 @@ namespace Global.PreferencesService
             }
         }
 
-        public KeyCode MoveForwardButton = KeyCode.W;
-        public KeyCode MoveBackwardButton = KeyCode.S;
-        public KeyCode MoveRightButton = KeyCode.D;
-        public KeyCode MoveLeftButton = KeyCode.A;
-        public KeyCode JumpButton = KeyCode.Space;
-        public KeyCode InventoryButton = KeyCode.E;
-        public KeyCode InteractButton = KeyCode.F;
-        public KeyCode SprintButton = KeyCode.LeftControl;
+        public KeyCode MoveForwardButton { get; private set; } = KeyCode.W;
+        public KeyCode MoveBackwardButton { get; private set; } = KeyCode.S;
+        public KeyCode MoveRightButton { get; private set; } = KeyCode.D;
+        public KeyCode MoveLeftButton { get; private set; } = KeyCode.A;
+        public KeyCode JumpButton { get; private set; } = KeyCode.Space;
+        public KeyCode InventoryButton { get; private set; } = KeyCode.E;
+        public KeyCode InteractButton { get; private set; } = KeyCode.F;
+        public KeyCode SprintButton { get; private set; } = KeyCode.LeftControl;
+
+        public float Sensitivity { get; private set; } = 0.7f;
     }
 }

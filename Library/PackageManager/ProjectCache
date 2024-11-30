@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638677943680000000
-    m_Hash: 2681994078
+      ticks: 638685797010000000
+    m_Hash: 3483028737
   m_LockFileStatus:
     m_FilePath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638677943680000000
-    m_Hash: 2136723057
+      ticks: 638685797010000000
+    m_Hash: 15921165
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -34,7 +34,7 @@ m_LocalPackages:
       ticks: 0
     m_Hash: 0
 m_ProjectPath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Packages"
-m_EditorVersion: 6000.0.27f1 (27c554a2199c)
+m_EditorVersion: 6000.0.29f1 (9fafe5c9db65)
 m_ResolvedPackages:
 - packageId: com.github-glitchenzo.nugetforunity@file:/home/grommoott/aur/NuGetForUnity/src/NuGetForUnity
   testable: 0
@@ -198,8 +198,10 @@ m_ResolvedPackages:
     - 2.4.4
     - 2.5.1
     - 2.5.2
+    - 2.6.0
     compatible:
     - 2.5.2
+    - 2.6.0
     recommended: 2.5.2
     deprecated: []
   dependencies: []
@@ -352,10 +354,10 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"quickstart":"https://docs.unity3d.com/2021.2/Documentation/Manual/DeveloperToolsFeature.html"}'
+  upmReserved: '{"quickstart":"https://docs.unity3d.com/Documentation/Manual/DeveloperToolsFeature.html"}'
   assetStore:
     productId: 
-  fingerprint: c770b6a36a30949b030c5ec02d835f771b975cbb
+  fingerprint: 767aadbc6eb72681a4ca807c8fa248e0230a0cef
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.2
@@ -784,6 +786,105 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.7
     minimumUnityVersion: 2019.3.0a1
+- packageId: com.unity.toolchain.linux-x86_64@2.0.10
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.10
+  source: 1
+  resolvedPath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Library/PackageCache/com.unity.toolchain.linux-x86_64"
+  assetPath: Packages/com.unity.toolchain.linux-x86_64
+  name: com.unity.toolchain.linux-x86_64
+  displayName: Toolchain Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Toolchain to build player target Linux x86_64 on host Linux x86_64
+  errors: []
+  versions:
+    all:
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.9
+    - 2.0.10
+    compatible:
+    - 2.0.10
+    recommended: 2.0.10
+    deprecated: []
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.10
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.9
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.10
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.9
+  keywords:
+  - toolchain
+  - linux
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638651065863710000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.toolchain.linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: c5a32c15f32b7de0b0aa81c256ea52b322478b15
+    path: 
+  unityLifecycle:
+    version: 2.0.10
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"Optimized and reduced package size"}'
+  assetStore:
+    productId: 
+  fingerprint: 5a6ce31f8a65b8bae16857cfbdc108c58cdd34f9
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.0.10
+    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.ugui@2.0.0
   testable: 0
   isDirectDependency: 1
@@ -871,15 +972,15 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 9d9058d4bb03a69b30ff0c4823a6bb2a67eedf1e
+  fingerprint: 6151fd7d4088857d856dde142c3e276ed84f5a8a
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
     minimumUnityVersion: 2019.2.0a1
-- packageId: com.unity.visualscripting@1.9.4
+- packageId: com.unity.visualscripting@1.9.5
   testable: 0
   isDirectDependency: 1
-  version: 1.9.4
+  version: 1.9.5
   source: 1
   resolvedPath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Library/PackageCache/com.unity.visualscripting"
   assetPath: Packages/com.unity.visualscripting
@@ -929,7 +1030,6 @@ m_ResolvedPackages:
     - 1.9.4
     - 1.9.5
     compatible:
-    - 1.9.4
     - 1.9.5
     recommended: 1.9.5
     deprecated:
@@ -961,16 +1061,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638488567680000000
+  datePublishedTicks: 638659692270900000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 41aac2b7038c2b1259c546329890d3736ce2394e
+    revision: 3621ef0207747a605f195118ba99d1a8bdb19433
     path: 
   unityLifecycle:
-    version: 1.9.4
+    version: 1.9.5
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -980,14 +1080,19 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fixed sqlite dll changes not being recognized
-    correctly by the 2022.3 Unity Editor"}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed \"NullReferenceException\" error
+    when returning to the State Graph from the Script Graph. [UVSB-1905](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-1905)\n-
+    Fixed compilation error when a graph contains a reference to a method with an
+    \"in\" parameter. [UVSB-2544](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-2487)\n-
+    Added missing truncate function to Formula node [UVSB-2526](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-2525)\n-
+    Fixed an error when creating a Script Graph asset in an empty project\n\n###
+    Changed\n- Updated deprecated EditorAnalytics APIs to new ones"}'
   assetStore:
     productId: 
-  fingerprint: 0920df93f9574f857a55af27bd38fdd9230a3f51
+  fingerprint: 1b53f46e931bea668e53f1feb0ac9138170c9455
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.9.4
+    minimumPackageVersion: 1.9.5
     minimumUnityVersion: 2021.3.0a1
 - packageId: com.unity.modules.accessibility@1.0.0
   testable: 0
@@ -3410,6 +3515,187 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
     minimumUnityVersion: 
+- packageId: com.unity.sysroot@2.0.10
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.10
+  source: 1
+  resolvedPath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Library/PackageCache/com.unity.sysroot"
+  assetPath: Packages/com.unity.sysroot
+  name: com.unity.sysroot
+  displayName: Sysroot Base
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: This is the base sysroot package required by all sysroot and toolchain
+    packages
+  errors: []
+  versions:
+    all:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.7
+    - 2.0.10
+    compatible:
+    - 2.0.10
+    recommended: 2.0.10
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638500638510000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 48e503c8f30007e813fbcec90dc84795285406b4
+    path: 
+  unityLifecycle:
+    version: 2.0.10
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"bump version number to publish"}'
+  assetStore:
+    productId: 
+  fingerprint: 7bbbb9339c143f6fbccaeb0a52c77b9217b35a71
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.0.10
+    minimumUnityVersion: 2019.4.0a1
+- packageId: com.unity.sysroot.linux-x86_64@2.0.9
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.9
+  source: 1
+  resolvedPath: "/home/grommoott/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Unity/IPMNN/Library/PackageCache/com.unity.sysroot.linux-x86_64"
+  assetPath: Packages/com.unity.sysroot.linux-x86_64
+  name: com.unity.sysroot.linux-x86_64
+  displayName: Sysroot Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Sysroot used to build unity player for linux x86_64
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.9
+    compatible:
+    - 2.0.9
+    recommended: 2.0.9
+    deprecated: []
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.10
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.10
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638500638600000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot.linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: bf7a008256a1175e0f8a0d7d26d6826cbfbe1bb2
+    path: 
+  unityLifecycle:
+    version: 2.0.9
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"bump version number to publish"}'
+  assetStore:
+    productId: 
+  fingerprint: 1998d1c7730e48fa49f28d983fececfc9cbd970b
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.0.9
+    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
@@ -4235,4 +4521,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2019.4.0a1
-m_BuiltInPackagesHash: cbd950e553b6ad4e284b2f56cc024852fb2d1b9f
+m_BuiltInPackagesHash: 4d29328b25e8aaf92ef3c0fb7a1b9a23a798c819

@@ -3311,8 +3311,8 @@ namespace TMPro
 
                 if (input == 0) return;
 
-                // Doesn't update the text but still updates CaretSelectPosition and StringSelectPosition.
-                Insert(input, false);
+                if (!char.IsHighSurrogate(input))
+                    m_CaretSelectPosition = m_CaretPosition += 1;
 
                 SendOnValueChanged();
                 UpdateLabel();
@@ -3334,7 +3334,7 @@ namespace TMPro
 
 
         // Insert the character and update the label.
-        private void Insert(char c, bool updateText = true)
+        private void Insert(char c)
         {
             if (m_ReadOnly)
                 return;
@@ -3347,12 +3347,8 @@ namespace TMPro
             // Can't go past the character limit
             if (characterLimit > 0 && text.Length >= characterLimit)
                 return;
-
-            // In the case of custom validation, the user can update the text themselves.
-            if (updateText)
-            {
-                m_Text = text.Insert(m_StringPosition, replaceString);
-            }
+            
+            m_Text = text.Insert(m_StringPosition, replaceString);
 
             if (!char.IsHighSurrogate(c))
                 m_CaretSelectPosition = m_CaretPosition += 1;

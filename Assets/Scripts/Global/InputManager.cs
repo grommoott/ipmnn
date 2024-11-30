@@ -129,7 +129,7 @@ namespace Global.InputManager
                 axes.x -= 1;
             }
 
-            _axes = axes;
+            _axes = axes.normalized;
 
             Vector2 cameraMove = Input.mousePositionDelta;
             cameraMove.y = -cameraMove.y;

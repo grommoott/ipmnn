@@ -30,6 +30,6 @@ namespace Items.Shell
             _instance = this;
         }
 
-        [SerializeField] private ItemShell itemShells = new();
+        [SerializeField] private ItemShell itemShell;
     }
 }
