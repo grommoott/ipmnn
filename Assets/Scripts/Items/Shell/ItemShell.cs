@@ -32,8 +32,6 @@ namespace Items.Shell
                 return;
             }
             _item = item;
-
-
         }
     }
 }
