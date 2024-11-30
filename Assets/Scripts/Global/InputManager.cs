@@ -1,5 +1,5 @@
 using UnityEngine;
-using Global.GlobalEvent;
+using Global.GlobalEvents;
 
 namespace Global.InputManager
 {
@@ -99,6 +99,7 @@ namespace Global.InputManager
             if (_instance)
             {
                 Destroy(gameObject);
+                return;
             }
 
             _instance = this;

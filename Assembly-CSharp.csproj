@@ -65,7 +65,21 @@
     <Analyzer Include="/home/grommoott/Unity/Hub/Editor/6000.0.27f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/TestScript.cs" />
+    <Compile Include="Assets/Scripts/Global/PreferencesService.cs" />
+    <Compile Include="Assets/Scripts/Items/Item.cs" />
+    <Compile Include="Assets/Scripts/Items/ItemManager.cs" />
+    <Compile Include="Assets/Scripts/Items/ItemIds.cs" />
+    <Compile Include="Assets/Scripts/Global/GlobalEvents/GlobalEvent.cs" />
+    <Compile Include="Assets/Scripts/Items/Storages/ShopInventory.cs" />
+    <Compile Include="Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventory.cs" />
+    <Compile Include="Assets/Scripts/Items/Storages/Inventory.cs" />
+    <Compile Include="Assets/Scripts/Global/GlobalEvents/GlobalEventLists/Input.cs" />
+    <Compile Include="Assets/Scripts/Items/Storages/PlayerInventory/PlayerInventorySlot.cs" />
+    <Compile Include="Assets/Scripts/Items/Shell/ItemShellManager.cs" />
+    <Compile Include="Assets/Scripts/Global/GlobalEvents/GlobalEventsManager.cs" />
+    <Compile Include="Assets/Scripts/Items/Shell/ItemShell.cs" />
+    <Compile Include="Assets/Scripts/Global/GlobalEvents/IGlobalEventListener.cs" />
+    <Compile Include="Assets/Scripts/Global/InputManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/KeraLua.1.4.1/lib/netstandard2.0/KeraLua.dll" />
@@ -535,6 +549,10 @@
       <HintPath>/home/grommoott/Unity/Hub/Editor/6000.0.27f1/Editor/Data/Managed/UnityEngine/UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="KeraLua">
+      <HintPath>Assets/Packages/KeraLua.1.4.1/lib/netstandard2.0/KeraLua.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library/PackageCache/com.unity.ext.nunit/net40/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
@@ -549,10 +567,6 @@
     </Reference>
     <Reference Include="NLua">
       <HintPath>Assets/Packages/NLua.1.7.3/lib/netstandard2.0/NLua.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="KeraLua">
-      <HintPath>Assets/Packages/KeraLua.1.4.1/lib/netstandard2.0/KeraLua.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
