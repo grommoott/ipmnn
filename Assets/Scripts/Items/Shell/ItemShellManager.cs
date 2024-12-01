@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace Items.Shell
 {
@@ -30,6 +29,13 @@ namespace Items.Shell
             _instance = this;
         }
 
-        [SerializeField] private ItemShell itemShell;
+        [SerializeField] private GameObject ItemShellGO;
+
+        public void SpawnItem(Item item, Vector3 position)
+        {
+            GameObject itemShellGO = Instantiate(ItemShellGO, position, Quaternion.identity, transform);
+            ItemShell itemShell = itemShellGO.AddComponent<ItemShell>();
+            itemShell.SetItem(item);
+        }
     }
 }

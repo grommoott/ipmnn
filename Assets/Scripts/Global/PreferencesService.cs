@@ -28,6 +28,6 @@ namespace Global.PreferencesService
         public KeyCode InteractButton { get; private set; } = KeyCode.F;
         public KeyCode SprintButton { get; private set; } = KeyCode.LeftControl;
 
-        public float Sensitivity { get; private set; } = 100f;
+        public float Sensitivity { get; private set; } = 70f;
     }
 }

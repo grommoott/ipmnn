@@ -142,9 +142,12 @@ namespace Global.InputManager
 
             _isJump = Input.GetKey(PreferencesService.PreferencesService.Instance.JumpButton);
 
+            _isInteract = false;
+
             if (Input.GetKeyDown(PreferencesService.PreferencesService.Instance.InteractButton))
             {
                 GlobalEventsManager.Instance.OnInteract.Invoke();
+                _isInteract = true;
             }
 
             if (Input.GetMouseButtonDown(0))

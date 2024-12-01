@@ -5,8 +5,8 @@ namespace Player
 {
     public class PlayerInventoryManager : MonoBehaviour
     {
-        private Player _player;
-        public Player Player
+        private PlayerController _player;
+        public PlayerController Player
         {
             get
             {
@@ -25,7 +25,8 @@ namespace Player
 
         private void Awake()
         {
-            _player = GetComponent<Player>();
+            _player = GetComponent<PlayerController>();
+            _inventory = new PlayerInventory();
         }
     }
 }

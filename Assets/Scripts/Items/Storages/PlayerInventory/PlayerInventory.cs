@@ -5,7 +5,7 @@ namespace Items.Storages
 {
     public class PlayerInventory : Inventory
     {
-        private Dictionary<PlayerInventorySlot, Item> _playerSlots;
+        private Dictionary<PlayerInventorySlot, Item> _playerSlots = new();
 
         public ReadOnlyDictionary<PlayerInventorySlot, Item> PlayerSlots
         {

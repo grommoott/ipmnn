@@ -1,10 +1,44 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Interacting;
+using Player;
 
 namespace Items.Shell
 {
-    public class ItemShell : MonoBehaviour
+    public class ItemShell : MonoBehaviour, IInteractable
     {
         private Item _item = null;
+
+        private List<Interaction> _interactions = new();
+
+        private void Awake()
+        {
+            _interactions.Add(new Interaction("Поднять", InteractingMethod.DefaultInteract, (interactor) =>
+            {
+                switch (interactor.GetInteractorType())
+                {
+                    case InteractorType.Player:
+                        PlayerController player = interactor as PlayerController;
+
+                        _item = player.InventoryManager.Inventory.AddItem(_item);
+
+                        if (_item == null)
+                        {
+                            Destroy(gameObject);
+                            return;
+                        }
+
+                        return;
+
+                    default:
+                        return;
+
+                }
+            }, (interactor) =>
+            {
+                return true;
+            }));
+        }
 
         public Item GetCount(int count)
         {
@@ -32,6 +66,14 @@ namespace Items.Shell
                 return;
             }
             _item = item;
+
+            GameObject model = Resources.Load<GameObject>("Models/Items/" + item.Id);
+            Instantiate(model, transform);
+        }
+
+        public List<Interaction> GetInteractions()
+        {
+            return _interactions;
         }
     }
 }

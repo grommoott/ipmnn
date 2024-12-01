@@ -8,8 +8,8 @@ namespace Player
 {
     public class PlayerMovementManager : MonoBehaviour
     {
-        private Player _player;
-        public Player Player
+        private PlayerController _player;
+        public PlayerController Player
         {
             get
             {
@@ -29,17 +29,17 @@ namespace Player
         [SerializeField] private float _defaultSurfaceFriction;
         [SerializeField] private float _defaultSurfaceControllability;
         [SerializeField] private float _speed;
+        [SerializeField] private float _sprintingSpeed;
         [SerializeField] private float _gravity;
         [SerializeField] private float _jumpVelocity;
         [SerializeField] private MinMax _cameraExtremumRotations;
 
         private Vector3 _velocity;
         private float _headRotation;
-        private bool _isJumpAvailable;
 
         private void Awake()
         {
-            _player = GetComponent<Player>();
+            _player = GetComponent<PlayerController>();
             _characterController = GetComponent<CharacterController>();
         }
 
@@ -61,7 +61,7 @@ namespace Player
             Vector2 axes = InputManager.Instance.Axes;
             Vector3 velocityDirection = transform.localToWorldMatrix.MultiplyVector(new Vector3(axes.x, 0, axes.y));
 
-            Player.AnimationManager.IsMoving = Vector3.Distance(axes, Vector3.zero) == 0;
+            Player.AnimationManager.IsMoving = Vector3.Distance(axes, Vector3.zero) != 0;
 
             if (_characterController.isGrounded)
             {
@@ -77,7 +77,9 @@ namespace Player
                 _velocity += Time.fixedDeltaTime * new Vector3(0, -_gravity, 0);
             }
 
-            _velocity += _speed * velocityDirection * Time.fixedDeltaTime * _controllabilityRatio;
+            float speed = InputManager.Instance.IsSprinting ? _sprintingSpeed : _speed;
+
+            _velocity += velocityDirection * Time.fixedDeltaTime * _controllabilityRatio * speed;
             _velocity *= _frictionRatio;
 
             _characterController.Move(_velocity);

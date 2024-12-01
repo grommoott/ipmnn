@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using UnityEngine;
 
 namespace Items.Storages
 {
@@ -16,12 +17,14 @@ namespace Items.Storages
 
         public Item AddItem(Item item)
         {
+            Debug.Log($"{item.Name}, {item.Count}");
+
             for (int i = 0; i < _items.Count && item.Count != 0; i++)
             {
                 item = _items[i].AddItem(item);
             }
 
-            if (item.Count != 0)
+            if (item != null)
             {
                 _items.Add(item);
             }
