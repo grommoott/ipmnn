@@ -21,7 +21,9 @@ namespace Player
         private LayerMask _surface;
 
         [SerializeField] private Transform _head;
-        [SerializeField] private Trigger _floorTrigger;
+        [SerializeField] private Transform _floorPoint;
+        [SerializeField] private float _floorOverlapRadius;
+        [SerializeField] private LayerMask _floorOverlapMask;
         [SerializeField] private float _airFriction;
         [SerializeField] private float _airControllability;
         [SerializeField] private float _defaultSurfaceFriction;
@@ -29,12 +31,11 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _gravity;
         [SerializeField] private float _jumpVelocity;
+        [SerializeField] private MinMax _cameraExtremumRotations;
 
         private Vector3 _velocity;
+        private float _headRotation;
         private bool _isJumpAvailable;
-
-        private List<float> _frictionRatios = new();
-        private List<float> _controllabilityRatios = new();
 
         private void Awake()
         {
@@ -42,43 +43,25 @@ namespace Player
             _characterController = GetComponent<CharacterController>();
         }
 
-        private void Start()
-        {
-            _floorTrigger.OnStay += OnFloorTriggerStay;
-        }
-
         private void Update()
         {
-            _head.Rotate(new Vector3(InputManager.Instance.CameraMove.y, 0, 0) * PreferencesService.Instance.Sensitivity);
-            transform.Rotate(new Vector3(0, InputManager.Instance.CameraMove.x, 0) * PreferencesService.Instance.Sensitivity);
+            _headRotation += InputManager.Instance.CameraMove.y * PreferencesService.Instance.Sensitivity * Time.deltaTime;
+            transform.Rotate(new Vector3(0, InputManager.Instance.CameraMove.x, 0) * PreferencesService.Instance.Sensitivity * Time.deltaTime);
 
-            /*if (_head.eulerAngles.x <= 0)*/
-            /*{*/
-            /*    _head.eulerAngles = new Vector3(0, _head.rotation.y, _head.rotation.z);*/
-            /*}*/
-            /*else if (_head.eulerAngles.x >= 180)*/
-            /*{*/
-            /*    _head.eulerAngles = new Vector3(180, _head.rotation.y, _head.rotation.z);*/
-            /*}*/
+            _headRotation = Mathf.Clamp(_headRotation, _cameraExtremumRotations.Min, _cameraExtremumRotations.Max);
+
+            _head.localEulerAngles = new Vector3(_headRotation, 0, 0);
+            Player.AnimationManager.HeadRotation = _headRotation;
         }
 
         private void FixedUpdate()
         {
-            // сделать через Physics.OverlapSphere
-
-            _frictionRatios.Add(_airFriction);
-            _controllabilityRatios.Add(_airControllability);
-
-            float _frictionRatio = 0;
-            _frictionRatios.ForEach(ratio => _frictionRatio += ratio);
-            _frictionRatio /= _frictionRatios.Count;
-
-            float _controllabilityRatio = 0;
-            _controllabilityRatios.ForEach(ratio => _controllabilityRatio += ratio);
-            _controllabilityRatio /= _controllabilityRatios.Count;
+            (float _frictionRatio, float _controllabilityRatio) = GetFrictionAndControllability();
 
             Vector2 axes = InputManager.Instance.Axes;
             Vector3 velocityDirection = transform.localToWorldMatrix.MultiplyVector(new Vector3(axes.x, 0, axes.y));
+
+            Player.AnimationManager.IsMoving = Vector3.Distance(axes, Vector3.zero) == 0;
 
             if (_characterController.isGrounded)
             {
@@ -98,28 +81,49 @@ namespace Player
             _velocity *= _frictionRatio;
 
             _characterController.Move(_velocity);
-            _frictionRatios = new();
-            _controllabilityRatios = new();
         }
 
-        private void OnFloorTriggerStay(Collider other)
+        private (float, float) GetFrictionAndControllability()
         {
-            _isJumpAvailable = true;
+            Collider[] colliders = Physics.OverlapSphere(_floorPoint.position, _floorOverlapRadius, _floorOverlapMask);
 
-            Debug.Log(other.name);
+            List<float> _frictionRatios = new();
+            List<float> _controllabilityRatios = new();
 
-            ISurface surface = other.gameObject.GetComponent<ISurface>();
+            _frictionRatios.Add(_airFriction);
+            _controllabilityRatios.Add(_airControllability);
 
-            if (surface == null)
+            foreach (Collider collider in colliders)
             {
-                _frictionRatios.Add(_defaultSurfaceFriction);
-                _controllabilityRatios.Add(_defaultSurfaceControllability);
+                ISurface surface = collider.gameObject.GetComponent<ISurface>();
+
+                if (surface == null)
+                {
+                    _frictionRatios.Add(_defaultSurfaceFriction);
+                    _controllabilityRatios.Add(_defaultSurfaceControllability);
+                }
+                else
+                {
+                    _frictionRatios.Add(surface.GetFrictionRatio());
+                    _controllabilityRatios.Add(surface.GetControlabilityRatio());
+                }
             }
-            else
-            {
-                _frictionRatios.Add(surface.GetFrictionRatio());
-                _controllabilityRatios.Add(surface.GetControlabilityRatio());
-            }
+
+            float _frictionRatio = 0;
+            _frictionRatios.ForEach(ratio => _frictionRatio += ratio);
+            _frictionRatio /= _frictionRatios.Count;
+
+            float _controllabilityRatio = 0;
+            _controllabilityRatios.ForEach(ratio => _controllabilityRatio += ratio);
+            _controllabilityRatio /= _controllabilityRatios.Count;
+
+            return (_frictionRatio, _controllabilityRatio);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(_floorPoint.position, _floorOverlapRadius);
         }
 
     }

@@ -36,10 +36,20 @@ namespace Player
             }
         }
 
+        private PlayerAnimationManager _animationManager;
+        public PlayerAnimationManager AnimationManager
+        {
+            get
+            {
+                return _animationManager;
+            }
+        }
+
         private void Awake()
         {
             _inventoryManager = GetComponent<PlayerInventoryManager>();
             _movementManager = GetComponent<PlayerMovementManager>();
+            _animationManager = GetComponent<PlayerAnimationManager>();
         }
 
         private void Start()
