@@ -1199,3 +1199,83 @@ Memory consumption went from 91.1 MB to 91.0 MB.
 Total: 9.709319 ms (FindLiveObjects: 0.419596 ms CreateObjectMapping: 0.956952 ms MarkObjects: 6.631205 ms  DeleteObjects: 1.700133 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1811.157617 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bef72eccc6902e648db911c98535eb62') in 0.01476272 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 420.546964 seconds.
+  path: Assets/Models/Energomed.fbx
+  artifactKey: Guid(0288029de005c2606b1481dd1af40ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Energomed.fbx using Guid(0288029de005c2606b1481dd1af40ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de6a2e70fb0d4261ac5d612d3573f5e2') in 0.229975547 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.313528 seconds.
+  path: Assets/Models/BlenderFiles/Artem.blend
+  artifactKey: Guid(a4ff232bc7768bf988357da7ab774e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BlenderFiles/Artem.blend using Guid(a4ff232bc7768bf988357da7ab774e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4abcf53a2d993daeec2d06c1df0ed4ac') in 0.070695352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Models/BlenderFiles/Energomed.blend
+  artifactKey: Guid(dab3f688f3320fb8bbae75ff2f05857f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BlenderFiles/Energomed.blend using Guid(dab3f688f3320fb8bbae75ff2f05857f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2bbdd222124b2055b73b56aff22aafc') in 0.088323827 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Models/BlenderFiles/Medved.blend
+  artifactKey: Guid(65dbb9f5716cc296fb1f8f5a11319995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BlenderFiles/Medved.blend using Guid(65dbb9f5716cc296fb1f8f5a11319995) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '81976994df21facf093ea1cc423ecf2a') in 0.276600081 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 244
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.540139 seconds.
+  path: Assets/Models/BlenderFiles/textures
+  artifactKey: Guid(e8dd62a7415d7c108ba7c8e7020e5763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/BlenderFiles/textures using Guid(e8dd62a7415d7c108ba7c8e7020e5763) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd161dec9ed08995cb24a46d2677309a8') in 0.000536389 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.951794 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(6d0c14ba3f9eb93b2bcda1a15fd193fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(6d0c14ba3f9eb93b2bcda1a15fd193fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c99d6312f14dfd32f0f23d612b3eaf0a') in 0.000393453 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.707916 seconds.
+  path: Assets/Textures/MainTexture.png
+  artifactKey: Guid(f0bd34fdb31ac1316b50e3c39cdf1654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/MainTexture.png using Guid(f0bd34fdb31ac1316b50e3c39cdf1654) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a2aab0a8cff39ba94dddb9f639bf567f') in 0.014778109 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.495833 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(8978c1b767af59966a26bd25d74cbcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(8978c1b767af59966a26bd25d74cbcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8e74749f65ba1ce22a9342a386f67ce') in 0.025216579 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 295
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.427468 seconds.
+  path: Assets/Models/Materials/Medved.mat
+  artifactKey: Guid(becec4ca779027b15af16c4bcc3743ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Materials/Medved.mat using Guid(becec4ca779027b15af16c4bcc3743ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f59eae868700aa29b924254291b07f6') in 0.014003902 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
