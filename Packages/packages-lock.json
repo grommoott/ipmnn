@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.github-glitchenzo.nugetforunity": {
-      "version": "file:/home/grommoott/aur/NuGetForUnity/src/NuGetForUnity",
+      "version": "file:D:/Системные папки/Загрузки/NuGetForUnity-master/NuGetForUnity-master/src/NuGetForUnity",
       "depth": 0,
       "source": "local",
       "dependencies": {}

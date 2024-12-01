@@ -44,7 +44,11 @@ The following packages were updated:
   com.unity.visualscripting from version 1.9.2 to 1.9.4
   com.unity.inputsystem from version 1.8.1 to 1.11.2
 
+<<<<<<< Updated upstream
 === Sat Nov 30 23:07:46 2024
+=======
+=== Sun Dec  1 22:43:28 2024
+>>>>>>> Stashed changes
 
 Packages were changed.
 Update Mode: updateDependencies

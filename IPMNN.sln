@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{576B3AAE-00BF-8BAB-7221-664477AACB36}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetForUnity", "NuGetForUnity.csproj", "{3F872162-0507-4D6E-C62E-8AF918DCCBDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{8A9EA6E5-05B6-065E-DC61-B52A97CC7A51}"
+>>>>>>> Stashed changes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetForUnity", "NuGetForUnity.csproj", "{2BCF2BC8-3108-7326-EE79-C431C61F1314}"
 EndProject
@@ -11,6 +17,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< Updated upstream
 		{576B3AAE-00BF-8BAB-7221-664477AACB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{576B3AAE-00BF-8BAB-7221-664477AACB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576B3AAE-00BF-8BAB-7221-664477AACB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -19,6 +26,16 @@ Global
 		{2BCF2BC8-3108-7326-EE79-C431C61F1314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BCF2BC8-3108-7326-EE79-C431C61F1314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BCF2BC8-3108-7326-EE79-C431C61F1314}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{3F872162-0507-4D6E-C62E-8AF918DCCBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F872162-0507-4D6E-C62E-8AF918DCCBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F872162-0507-4D6E-C62E-8AF918DCCBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F872162-0507-4D6E-C62E-8AF918DCCBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9EA6E5-05B6-065E-DC61-B52A97CC7A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9EA6E5-05B6-065E-DC61-B52A97CC7A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9EA6E5-05B6-065E-DC61-B52A97CC7A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9EA6E5-05B6-065E-DC61-B52A97CC7A51}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
