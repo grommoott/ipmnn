@@ -32,6 +32,21 @@ namespace Items.Storages
             AddItemInSlot(slot, inInventory);
         }
 
+        public void Equip(string id, int count)
+        {
+            Item item = Items.First(item => item.Id == id);
+
+            if (!(item is IEquipable))
+            {
+                return;
+            }
+
+            PlayerInventorySlot slot = (item as IEquipable).GetSlot();
+
+            Item inInventory = GetItem(id, count);
+            AddItemInSlot(slot, inInventory);
+        }
+
         public void Unqeuip(PlayerInventorySlot slot)
         {
             Item inSlot = GetItemInSlot(slot);
