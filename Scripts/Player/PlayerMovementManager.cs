@@ -2,7 +2,7 @@ using UnityEngine;
 using Helpers;
 using System.Collections.Generic;
 using Global.InputManager;
-using Global.PreferencesService;
+using Global.Preferences;
 using Effects;
 using System.Collections;
 using Saves;
@@ -56,13 +56,13 @@ namespace Player
 
         private void LateUpdate()
         {
-            if (UIManager.Instance.IsPageOpended)
+            if (UIManager.Instance.IsPageOpended || Player.SleepingManager.IsSleeping)
             {
                 return;
             }
 
-            _headRotation += InputManager.Instance.CameraMove.y * PreferencesService.Instance.Sensitivity * Time.deltaTime;
-            _childrenTransform.Rotate(new Vector3(0, InputManager.Instance.CameraMove.x, 0) * PreferencesService.Instance.Sensitivity * Time.deltaTime);
+            _headRotation += InputManager.Instance.CameraMove.y * PreferencesManager.Instance.Sensitivity * Time.deltaTime;
+            _childrenTransform.Rotate(new Vector3(0, InputManager.Instance.CameraMove.x, 0) * PreferencesManager.Instance.Sensitivity * Time.deltaTime);
 
             _headRotation = Mathf.Clamp(_headRotation, _cameraExtremumRotations.Min, _cameraExtremumRotations.Max);
             _selfRotation = transform.localEulerAngles.y;

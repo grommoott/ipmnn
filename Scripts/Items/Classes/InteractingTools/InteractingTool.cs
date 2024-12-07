@@ -16,13 +16,13 @@ namespace Items.Classes.InteractingTools
             Player.PlayerController.Instance.InteractingManager.StartCoroutine(MakeDelay(callback));
         }
 
-        public PlayerInventorySlot GetSlotAvailable()
+        public PlayerInventorySlot GetSlot()
         {
             return PlayerInventorySlot.Hand;
         }
 
-        virtual public void Equip(PlayerInventorySlot slot) { }
-        virtual public void Unequip(PlayerInventorySlot slot) { }
+        virtual public void Equip() { }
+        virtual public void Unequip() { }
 
         protected abstract float GetCooldownTime();
         protected abstract float GetPreparingTime();

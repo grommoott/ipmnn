@@ -263,6 +263,12 @@ namespace Saves
 
         public static async void GoToScene(string sceneName)
         {
+            if (sceneName == null)
+            {
+                GoToScene(LocationNames.Hub);
+                return;
+            }
+
             await _instance?.SaveGame();
             _instance = null;
             await SceneManager.LoadSceneAsync(_sceneIds[sceneName]);

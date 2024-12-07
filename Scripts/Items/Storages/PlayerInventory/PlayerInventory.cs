@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Items.Interfaces;
 
 namespace Items.Storages
 {
@@ -16,6 +17,27 @@ namespace Items.Storages
             }
         }
 
+        public void Equip(string id)
+        {
+            Item item = Items.First(item => item.Id == id);
+
+            if (!(item is IEquipable))
+            {
+                return;
+            }
+
+            PlayerInventorySlot slot = (item as IEquipable).GetSlot();
+
+            Item inInventory = GetItem(id);
+            AddItemInSlot(slot, inInventory);
+        }
+
+        public void Unqeuip(PlayerInventorySlot slot)
+        {
+            Item inSlot = GetItemInSlot(slot);
+            AddItem(inSlot);
+        }
+
         public Item GetItemInSlot(PlayerInventorySlot slot, int count)
         {
             if (_playerSlots[slot] == null)
@@ -24,6 +46,23 @@ namespace Items.Storages
             }
 
             Item item = _playerSlots[slot].GetCount(count);
+
+            if (_playerSlots[slot].Count == 0)
+            {
+                _playerSlots[slot] = null;
+            }
+
+            return item;
+        }
+
+        public Item GetItemInSlot(PlayerInventorySlot slot)
+        {
+            if (_playerSlots[slot] == null)
+            {
+                return null;
+            }
+
+            Item item = _playerSlots[slot].GetAll();
 
             if (_playerSlots[slot].Count == 0)
             {

@@ -109,6 +109,13 @@ namespace Items
             return item;
         }
 
+        public Item GetAll()
+        {
+            Item item = ItemManager.GetById(Id, Count);
+            Count = 0;
+            return item;
+        }
+
         public virtual bool IsStackable(Item other)
         {
             return other.Id == Id;

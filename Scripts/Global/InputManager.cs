@@ -42,7 +42,7 @@ namespace Global.InputManager
         {
             get
             {
-                return _cameraMove;
+                return new Vector2(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
             }
         }
 
@@ -118,42 +118,38 @@ namespace Global.InputManager
         {
             Vector2 axes = new();
 
-            if (Input.GetKey(PreferencesService.PreferencesService.Instance.MoveForwardButton))
+            if (Input.GetKey(Preferences.PreferencesManager.Instance.MoveForwardButton))
             {
                 axes.y += 1;
             }
 
-            if (Input.GetKey(PreferencesService.PreferencesService.Instance.MoveBackwardButton))
+            if (Input.GetKey(Preferences.PreferencesManager.Instance.MoveBackwardButton))
             {
                 axes.y -= 1;
             }
 
-            if (Input.GetKey(PreferencesService.PreferencesService.Instance.MoveRightButton))
+            if (Input.GetKey(Preferences.PreferencesManager.Instance.MoveRightButton))
             {
                 axes.x += 1;
             }
 
-            if (Input.GetKey(PreferencesService.PreferencesService.Instance.MoveLeftButton))
+            if (Input.GetKey(Preferences.PreferencesManager.Instance.MoveLeftButton))
             {
                 axes.x -= 1;
             }
 
             _axes = axes.normalized;
 
-            Vector2 cameraMove = Input.mousePositionDelta;
-            cameraMove.y = -cameraMove.y;
-            _cameraMove = cameraMove;
-
-            if (Input.GetKeyDown(PreferencesService.PreferencesService.Instance.InventoryButton))
+            if (Input.GetKeyDown(Preferences.PreferencesManager.Instance.InventoryButton))
             {
                 GlobalEventsManager.Instance.Input.OnInventory.Invoke();
             }
 
-            _isJump = Input.GetKey(PreferencesService.PreferencesService.Instance.JumpButton);
+            _isJump = Input.GetKey(Preferences.PreferencesManager.Instance.JumpButton);
 
             _isInteract = false;
 
-            if (Input.GetKeyDown(PreferencesService.PreferencesService.Instance.InteractButton))
+            if (Input.GetKeyDown(Preferences.PreferencesManager.Instance.InteractButton))
             {
                 GlobalEventsManager.Instance.Input.OnInteract.Invoke();
                 _isInteract = true;
@@ -172,16 +168,16 @@ namespace Global.InputManager
             _isLMB = Input.GetMouseButton(0);
             _isRMB = Input.GetMouseButton(1);
 
-            _isSprinting = Input.GetKey(PreferencesService.PreferencesService.Instance.SprintButton);
+            _isSprinting = Input.GetKey(Preferences.PreferencesManager.Instance.SprintButton);
 
-            _isMenu = Input.GetKey(PreferencesService.PreferencesService.Instance.MenuButton);
+            _isMenu = Input.GetKey(Preferences.PreferencesManager.Instance.MenuButton);
 
-            if (Input.GetKeyDown(PreferencesService.PreferencesService.Instance.MenuButton))
+            if (Input.GetKeyDown(Preferences.PreferencesManager.Instance.MenuButton))
             {
                 GlobalEventsManager.Instance.Input.OnMenu.Invoke();
             }
 
-            if (Input.GetKeyDown(PreferencesService.PreferencesService.Instance.QuestsButton))
+            if (Input.GetKeyDown(Preferences.PreferencesManager.Instance.QuestsButton))
             {
                 GlobalEventsManager.Instance.Input.OnQuests.Invoke();
             }

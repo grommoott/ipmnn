@@ -1,6 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
-using Global.PreferencesService;
+using Global.Preferences;
 
 namespace UI.Pages.Menu
 {
@@ -11,8 +11,8 @@ namespace UI.Pages.Menu
 
         private void Start()
         {
-            _volumeSlider.value = PreferencesService.Instance.VolumeMultiplier;
-            _sensitivitySlider.value = PreferencesService.Instance.SensitivityMultiplier;
+            _volumeSlider.value = PreferencesManager.Instance.VolumeMultiplier;
+            _sensitivitySlider.value = PreferencesManager.Instance.SensitivityMultiplier;
         }
 
         public void Resume()
@@ -32,12 +32,12 @@ namespace UI.Pages.Menu
 
         public void OnVolumeChange()
         {
-            PreferencesService.Instance.VolumeMultiplier = _volumeSlider.value;
+            PreferencesManager.Instance.VolumeMultiplier = _volumeSlider.value;
         }
 
         public void OnSensitivityChange()
         {
-            PreferencesService.Instance.SensitivityMultiplier = _sensitivitySlider.value;
+            PreferencesManager.Instance.SensitivityMultiplier = _sensitivitySlider.value;
         }
 
         public static MenuPage SpawnPage()

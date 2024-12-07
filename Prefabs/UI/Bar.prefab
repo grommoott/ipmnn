@@ -120,7 +120,7 @@ MonoBehaviour:
   _slider: {fileID: 5051622018609595914}
   _sliderForeground: {fileID: 3902365130255178409}
   _valueText: {fileID: 851715054877245148}
-  _color: {r: 0, g: 0, b: 0, a: 0}
+  _color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &661298172481227199
 GameObject:
   m_ObjectHideFlags: 0

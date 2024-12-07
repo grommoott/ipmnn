@@ -1,18 +1,20 @@
 using UnityEngine;
+using Newtonsoft.Json.Linq;
+using Saves;
 
-namespace Global.PreferencesService
+namespace Global.Preferences
 {
-    public class PreferencesService
+    public class PreferencesManager : MonoBehaviour, ISaveable
     {
-        private static PreferencesService _instance;
+        private static PreferencesManager _instance;
 
-        public static PreferencesService Instance
+        public static PreferencesManager Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new PreferencesService();
+                    _instance = new PreferencesManager();
                 }
 
                 return _instance;
@@ -30,12 +32,32 @@ namespace Global.PreferencesService
         public KeyCode MenuButton { get; private set; } = KeyCode.Escape;
         public KeyCode QuestsButton { get; private set; } = KeyCode.Q;
 
-        private float _sensitivity = 30f;
+        private float _sensitivity = 100f;
         public float SensitivityMultiplier = 1;
         public float Sensitivity { get { return _sensitivity * SensitivityMultiplier; } }
 
         private float _volume = 1;
         public float VolumeMultiplier = 1;
         public float Volume { get { return _volume * VolumeMultiplier; } }
+
+        public void Load(JObject data)
+        {
+            if (data == null)
+            {
+                return;
+            }
+
+            Serialization.Preferences preferences = data.ToObject<Serialization.Preferences>();
+
+            SensitivityMultiplier = preferences.SensitivityMultiplier;
+            VolumeMultiplier = preferences.VolumeMultiplier;
+        }
+
+        public object Save()
+        {
+            return new Serialization.Preferences(this);
+        }
+
+        public string GetSavingPath() => "preferences";
     }
 }

@@ -68,6 +68,22 @@ namespace Items.Storages
             return item;
         }
 
+        public Item GetItem(string id)
+        {
+            Item item = ItemManager.GetById(id, 0);
+
+            for (int i = 0; i < _items.Count; i++)
+            {
+                if (_items[i].IsStackable(item))
+                {
+                    item.AddItem(_items[i].GetCount(_items[i].Count));
+                    break;
+                }
+            }
+
+            return item;
+        }
+
         public Inventory(List<Item> items)
         {
             _items = items;
