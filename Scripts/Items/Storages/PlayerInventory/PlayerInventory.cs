@@ -29,7 +29,9 @@ namespace Items.Storages
             PlayerInventorySlot slot = (item as IEquipable).GetSlot();
 
             Item inInventory = GetItem(id);
+            Item inSlot = GetItemInSlot(slot);
             AddItemInSlot(slot, inInventory);
+            AddItem(inSlot);
         }
 
         public void Equip(string id, int count)
@@ -44,7 +46,9 @@ namespace Items.Storages
             PlayerInventorySlot slot = (item as IEquipable).GetSlot();
 
             Item inInventory = GetItem(id, count);
+            Item inSlot = GetItemInSlot(slot);
             AddItemInSlot(slot, inInventory);
+            AddItem(inSlot);
         }
 
         public void Unqeuip(PlayerInventorySlot slot)
